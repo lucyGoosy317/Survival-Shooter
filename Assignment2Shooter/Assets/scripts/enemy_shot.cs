@@ -1,24 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class enemy_shot : MonoBehaviour
-{
-  public void GotShot()
-    {
-        enemy_movement behavior = GetComponent<enemy_movement>();
-        if (behavior!= null)
-        {
-            behavior.SetAlive(false);
-        }
-        //behavior.anime.SetInteger("Condition",3);
-        StartCoroutine(Die());
-    }
-
-    private IEnumerator Die()
-    {
-        //this.transform.Rotate(-75,0,0);
-        yield return new WaitForSeconds(10.5f);
-        Destroy(this.gameObject);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c4e0fc73f8f73fed80433c2f4e7532c26b805d87b72f157837a19caba615899
+size 2737
